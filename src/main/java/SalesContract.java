@@ -5,7 +5,7 @@ public class SalesContract extends Contract {
     private static final double SAlES_TAX_RATE = 0.05;
     private static final double RECORDING_FEE = 100.0;
 
-    public SalesContract(String date, String customerName, String customerEmail, double vehicleSold, boolean isFinanced) {
+    public SalesContract(String date, String customerName, String customerEmail, int vehicleSold, boolean isFinanced) {
         super(date, customerName, customerEmail, vehicleSold);
         this.isFinanced = isFinanced;
     }
@@ -20,9 +20,15 @@ public class SalesContract extends Contract {
         }else {
             return 495.0;
         }
+        return fee;
     }
     private double getSalesTax(){
         return getVehicleSold().getPrice() * SAlES_TAX_RATE;
+    }
+
+    @Override
+    public double getTotalPrice() {
+        return 0;
     }
 
     @Override

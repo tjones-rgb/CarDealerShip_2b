@@ -2,12 +2,12 @@ public abstract class Contract {
     String date;
     String CustomerName;
     String CustomerEmail;
-    double VehicleSold;
+    int VehicleSold;
     double TotalPrice;
     int MonthlyPayment;
 
 
-    public Contract(String date, String customerName, String customerEmail, double vehicleSold) {
+    public Contract(String date, String customerName, String customerEmail, int vehicleSold) {
         this.date = date;
         CustomerName = customerName;
         CustomerEmail = customerEmail;
@@ -38,7 +38,7 @@ public abstract class Contract {
         CustomerEmail = customerEmail;
     }
 
-    public double getVehicleSold() {
+    public int getVehicleSold() {
         return VehicleSold;
     }
 
